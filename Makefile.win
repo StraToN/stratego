@@ -1,0 +1,72 @@
+# Project: Stratego
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = 
+OBJ  = Piece.o Test.o Unite.o Bombe.o Drapeau.o Espion.o Eclaireur.o Demineur.o Sergent.o Lieutenant.o Capitaine.o Commandant.o Colonel.o General.o Marechal.o $(RES)
+LINKOBJ  = Piece.o Test.o Unite.o Bombe.o Drapeau.o Espion.o Eclaireur.o Demineur.o Sergent.o Lieutenant.o Capitaine.o Commandant.o Colonel.o General.o Marechal.o $(RES)
+LIBS =  -L"C:/Dev-Cpp/lib"  
+INCS =  -I"C:/Dev-Cpp/include" 
+CXXINCS =  -I"C:/Dev-Cpp/lib/gcc/mingw32/3.4.2/include"  -I"C:/Dev-Cpp/include/c++/3.4.2/backward"  -I"C:/Dev-Cpp/include/c++/3.4.2/mingw32"  -I"C:/Dev-Cpp/include/c++/3.4.2"  -I"C:/Dev-Cpp/include" 
+BIN  = Stratego.exe
+CXXFLAGS = $(CXXINCS)   -Wno-deprecated
+CFLAGS = $(INCS)   -Wno-deprecated
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before Stratego.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o "Stratego.exe" $(LIBS)
+
+Piece.o: Piece.cpp
+	$(CPP) -c Piece.cpp -o Piece.o $(CXXFLAGS)
+
+Test.o: Test.cpp
+	$(CPP) -c Test.cpp -o Test.o $(CXXFLAGS)
+
+Unite.o: Unite.cpp
+	$(CPP) -c Unite.cpp -o Unite.o $(CXXFLAGS)
+
+Bombe.o: Bombe.cpp
+	$(CPP) -c Bombe.cpp -o Bombe.o $(CXXFLAGS)
+
+Drapeau.o: Drapeau.cpp
+	$(CPP) -c Drapeau.cpp -o Drapeau.o $(CXXFLAGS)
+
+Espion.o: Espion.cpp
+	$(CPP) -c Espion.cpp -o Espion.o $(CXXFLAGS)
+
+Eclaireur.o: Eclaireur.cpp
+	$(CPP) -c Eclaireur.cpp -o Eclaireur.o $(CXXFLAGS)
+
+Demineur.o: Demineur.cpp
+	$(CPP) -c Demineur.cpp -o Demineur.o $(CXXFLAGS)
+
+Sergent.o: Sergent.cpp
+	$(CPP) -c Sergent.cpp -o Sergent.o $(CXXFLAGS)
+
+Lieutenant.o: Lieutenant.cpp
+	$(CPP) -c Lieutenant.cpp -o Lieutenant.o $(CXXFLAGS)
+
+Capitaine.o: Capitaine.cpp
+	$(CPP) -c Capitaine.cpp -o Capitaine.o $(CXXFLAGS)
+
+Commandant.o: Commandant.cpp
+	$(CPP) -c Commandant.cpp -o Commandant.o $(CXXFLAGS)
+
+Colonel.o: Colonel.cpp
+	$(CPP) -c Colonel.cpp -o Colonel.o $(CXXFLAGS)
+
+General.o: General.cpp
+	$(CPP) -c General.cpp -o General.o $(CXXFLAGS)
+
+Marechal.o: Marechal.cpp
+	$(CPP) -c Marechal.cpp -o Marechal.o $(CXXFLAGS)
